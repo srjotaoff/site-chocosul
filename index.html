@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Chocosul Distribuidora</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="solicitar_suporte.css">
+    <link rel="shortcut icon" href="icone_chocosul.svg">
+    <script src="solicitar_suporte.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <header class="header_index">
+
+        <div id="header_cabecalho">
+            <div id="header_cabecalho_icones">
+                <img src="icone_linkedin.svg" alt="" class="header_cabecalho_icones">
+                <img src="icone_whatsapp.svg" alt="" class="header_cabecalho_icones">
+                <img src="icone_instagram.svg" alt="" class="header_cabecalho_icones">
+            </div>
+        </div>
+
+        <div id="header_painel_navegacao">
+            <div id="header_painel_navegacao_fundo">
+                <div id="header_painel_navegacao_fundo_esquerda">
+                    <img src="" id="header_painel_navegacao_fundo_esquerda_menu">
+                </div>
+                <img src="logo_chocosul.svg" alt="" id="header_painel_navegacao_fundo_logo">
+                <div id="header_painel_navegacao_fundo_direita"></div>
+            </div>
+
+            <div id="header_painel_navegacao_paginas">
+                <a href="">Início</a>
+                <a href="">Sobre Nós</a>
+                <a href="https://www.linkedin.com/jobs/grupo-ast%C3%B3ria-jobs-worldwide?f_C=3507044&trk=top-card_top-card-primary-button-top-card-primary-cta&position=1&pageNum=0">Trabalhe Conosco</a>
+                <a href="">Portal do vendedor</a>
+                <a href="https://loja.chocosul.com.br/entrar">Portal do Cliente</a>
+                <a href="https://loja.chocosul.com.br/">Loja Online</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main_index">
+        <div id="main_painel">
+            <p id="main_painel_titulo">Solicitar Suporte</p>
+            <div id="main_painel_formulario">
+                <div id="main_painel_formulario_setor">
+                    <button class="main_painel_formulario_setor" onclick="mostrar_opcoes_lista('financeiro')">Financeiro</button>
+                    <button class="main_painel_formulario_setor" onclick="mostrar_opcoes_lista('logistica')">Logística</button>
+                    <button class="main_painel_formulario_setor" onclick="mostrar_opcoes_lista('rh')">R.H.</button>
+                    <button class="main_painel_formulario_setor" onclick="mostrar_opcoes_lista('ti')">T.I.</button>
+                </div>
+                <div id="main_painel_formulario_opcoes">
+                    <div id="main_painel_formulario_opcoes_lista">
+                        <div class="main_painel_formulario_opcoes_lista" id="main_painel_formulario_opcoes_lista_financeiro">
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Alterar informações cadastrais do cliente.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="2">Análise de crédito do cliente.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="3">Desbloqueio do cliente.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="4">Reativação do cliente.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="5">Alterar a condição do pedido.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="6">Desbloqueio de pedido.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="7">Informações sobre vales.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="8">Informações sobre cadastro dos clientes.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="9">Informações sobre os títulos dos clientes.</label>
+                        </div>
+
+                        <div class="main_painel_formulario_opcoes_lista" id="main_painel_formulario_opcoes_lista_logistica">
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Cancelar pedido.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Refaturar pedido.</label>
+                        </div>
+
+                        <div class="main_painel_formulario_opcoes_lista" id="main_painel_formulario_opcoes_lista_rh">
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Solicitação de EPI.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Solicitação de plano odontológico.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Solicitação de plano de saúde.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Dúvida sobre contracheque.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Orientações sobre emissão de remuneração.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Dúvida sobre os benefícios da sólides.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Abrir uma reclamação.</label>
+                        </div>
+
+                        <div class="main_painel_formulario_opcoes_lista" id="main_painel_formulario_opcoes_lista_ti">
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Liberação do aplicativo de vendas.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Erro no aplicativo de vendas.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Reemisão da linha corporativa.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Problema com a linha corporativa.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Alteração de senha do e-mail.</label>
+                            <label class="main_painel_formulario_opcoes_lista_opcao"> <input name="main_painel_formulario_opcoes_lista" type="radio" value="1">Problema com o e-mail.</label>
+                        </div>
+                    </div>
+                    <textarea id="main_painel_formulario_opcoes_texto"></textarea>
+                </div>
+                <div id="main_painel_formulario_botoes">
+                    <div id="main_painel_formulario_botoes_anexo">
+                        <label id="main_painel_formulario_botoes_anexo_label" for="main_painel_formulario_botoes_anexo_input">Anexar arquivo</label>
+                        <input id="main_painel_formulario_botoes_anexo_input" type="file" accept="image/png, image/jpeg, image/jpg">
+                    </div>
+                    <button id="main_painel_formulario_botoes_salvar" onclick="salvar_solicitacao()">Salvar solicitação</button>
+                </div>
+                <div id="main_painel_formulario_alerta">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer_index">
+
+    </footer>
+
+  </body>
+</html>
