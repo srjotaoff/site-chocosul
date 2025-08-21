@@ -421,16 +421,15 @@ footer{
         text-align: center;
         padding-left: 15svw;
         padding-right: 15svw;
-        padding-top: 2svh;
     }
 
     .main_painel_superior_cta_texto_regular{
-        font-size: 4svw;
+        font-size: 3.5svw;
         font-family: 'Poppins';
     }
 
     .main_painel_superior_cta_texto_negrito{
-        font-size: 4svw;
+        font-size: 3.5svw;
         font-family: 'Poppins-Bold';
     }
 
