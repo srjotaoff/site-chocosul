@@ -450,6 +450,7 @@ footer{
     #main_painel_superior_cta_botao p{
         font-family: 'Poppins-Bold';
         color: var(--var_cor_branco);
+        font-size: 3svw;
     }
 
     #main_painel_superior_cta_botao img{
