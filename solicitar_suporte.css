@@ -22,6 +22,7 @@
   --var_cor_branco: #f2ebebff;
   --var_cor_vermelho: #f42f40ff;
   --var_cor_amarelo:  #f9a919ff;
+  --var-cor-preto: #1a1a1aff;
 }
 
 body{
@@ -45,15 +46,21 @@ header{
 }
 
 #header_cabecalho_icones{
-    padding-left: 0;
+    height: 2svh;
+    width: 5svw;
     padding-right: 10svw;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header_cabecalho_icones{
     height: 1svw;
     width: 1svw;
-    padding-left: 1svw;
+}
 
+.header_cabecalho_icones:hover{
+    transition: transform 0.25s;
+    transform: scale(1.5);
 }
 
 #header_painel_navegacao{
@@ -76,6 +83,10 @@ header{
     background-color: var(--var_cor_vermelho);
     border-top-right-radius: 5svh;
     border-bottom-right-radius: 5svh;
+}
+
+#header_painel_navegacao_fundo_esquerda_menu{
+    display: none;
 }
 
 #header_painel_navegacao_fundo_direita{
@@ -102,6 +113,7 @@ header{
 }
 
 #header_painel_navegacao_paginas a{
+    text-align: center;
     text-decoration: none;
     font-size: 1.75svh;
     color: var(--var_cor_branco);
@@ -341,6 +353,8 @@ footer{
         width: 20svw;
         padding-top: 2svh;
         padding-right: 10svw;
+        display: flex;
+        justify-content: space-between;
     }
 
     .header_cabecalho_icones{
@@ -370,6 +384,30 @@ footer{
         background-color: var(--var_cor_vermelho);
         border-top-right-radius: 5svh;
         border-bottom-right-radius: 5svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header_painel_navegacao_fundo_esquerda_menu{
+        height: 3svh;
+        width: 5svw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        margin: none;
+        padding: none;
+        background-color: transparent;
+    }
+
+    .header_painel_navegacao_fundo_esquerda_menu{
+        height: 0.5svh;
+        width: 5svw;
+        background-color: var(--var_cor_branco);
+        border: none;
+        border-radius: 0.5svh;
     }
 
     #header_painel_navegacao_fundo_direita{
@@ -389,10 +427,27 @@ footer{
         display: none;
     }
 
-    #header_painel_navegacao_paginas a{
-        display: none;
+    #header_painel_navegacao_paginas.aberto {
+        height: auto;
+        width: 85svw;
+        border: 0.25svh solid var(--var_cor_vermelho);
+        border-radius: 5svh;
+        background-color: var(--var_cor_branco);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 150%;
+        left: 7.5%;
+        box-shadow: 0 0 20svh 1svh var(--var-cor-preto);
+        box-sizing: border-box;
     }
 
+    #header_painel_navegacao_paginas.aberto a {
+        font-family: 'Poppins';
+        color: var(--var_cor_vermelho);
+        padding: 2svh;
+    }
+    
     main{
         height: auto;
         min-height: 70svh;

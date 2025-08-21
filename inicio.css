@@ -1,0 +1,512 @@
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(Poppins-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(Poppins-SemiBold.ttf) format('truetype');
+}
+
+:root {
+  --var_cor_branco: #f2ebebff;
+  --var_cor_vermelho: #f42f40ff;
+  --var_cor_amarelo:  #f9a919ff;
+  --var-cor-preto: #1a1a1aff;
+}
+
+body{
+    background-color: var(--var_cor_branco);
+    height: 100svh;
+    width: 100svw;
+    font-family: 'Poppins-Light';
+}
+
+header{
+    height: 15svh;
+    width: 100svw;
+}
+
+#header_cabecalho{
+    height: 10svh;
+    width: 100svw;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: flex-end; /* Alinha os itens para a direita */
+}
+
+#header_cabecalho_icones{
+    height: 2svh;
+    width: 5svw;
+    padding-right: 10svw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_cabecalho_icones{
+    height: 1svw;
+    width: 1svw;
+}
+
+.header_cabecalho_icones:hover{
+    transition: transform 0.25s;
+    transform: scale(1.5);
+}
+
+#header_painel_navegacao{
+    height: 5svh;
+    width: 100svw;
+    position: relative;
+}
+
+#header_painel_navegacao_fundo{
+    height: 5svh;
+    width: 100svw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+#header_painel_navegacao_fundo_esquerda{
+    height: 5svh;
+    width: 10svw;
+    background-color: var(--var_cor_vermelho);
+    border-top-right-radius: 5svh;
+    border-bottom-right-radius: 5svh;
+}
+
+#header_painel_navegacao_fundo_esquerda_menu{
+    display: none;
+}
+
+#header_painel_navegacao_fundo_direita{
+    height: 5svh;
+    width: 75svw;
+    background-color: var(--var_cor_vermelho);
+    border-bottom-left-radius: 5svh;
+    border-top-left-radius: 5svh;
+}
+
+#header_painel_navegacao_fundo_logo{
+    height: 5svh;
+    width: auto;
+}
+
+#header_painel_navegacao_paginas{
+    height: 5svh;
+    width: 60svw;
+    position: absolute;
+    right: 10svw;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#header_painel_navegacao_paginas a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.75svh;
+    color: var(--var_cor_branco);
+}
+
+main{
+    height: 80svh;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+}
+
+#main_painel_superior{
+    height: 55svh;
+    width: 100svw;
+    padding-top: 5svh;
+    display: flex;
+    justify-content: end;
+}
+
+#main_painel_superior_slide{
+    height: 55svh;
+    width: 66svw;  
+    box-sizing: border-box;
+    border: solid 0.5svh var(--var_cor_vermelho);
+    border-radius: 5svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main_painel_superior_slide{
+    height: 53svh;
+    width: 65svw;
+    border-radius: 4svh;
+    object-fit: cover;
+}
+
+#main_painel_superior_cta{
+    height: 55svh;
+    width: 20svw;
+    padding-left: 4svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#main_painel_superior_cta_texto{
+    padding-right: 10svw;
+    color: var(--var_cor_vermelho);
+    text-decoration: none;
+}
+
+.main_painel_superior_cta_texto_regular{
+    font-size: 4svh;
+    font-family: 'Poppins';
+}
+
+.main_painel_superior_cta_texto_negrito{
+    font-size: 4svh;
+    font-family: 'Poppins-Bold';
+}
+
+#main_painel_superior_cta_botao{
+    height: 5svh;
+    width: 20svw;  
+    background-color: var(--var_cor_vermelho);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 5svh;
+    border-bottom-left-radius: 5svh;
+    text-decoration: none;
+}
+
+#main_painel_superior_cta_botao p{
+    font-family: 'Poppins-Bold';
+    color: var(--var_cor_branco);
+}
+
+#main_painel_superior_cta_botao img{
+    height: 2svh;
+    width: 4.5svw; 
+}
+
+#main_painel_inferior{
+    height: 15svh;
+    width: 100svw; 
+    padding-top: 5svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main_painel_inferior_navegacao{
+    width: 20svw; 
+    padding-top: 2svh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main_painel_inferior_navegacao a{
+    font-family: 'Poppins';
+    color: var(--var_cor_vermelho);
+    text-decoration: none;
+    align-items: center;
+}
+
+#main_painel_inferior_navegacao img{
+    height: 2svh;
+    width: auto;
+}
+
+#main_painel_inferior_slide{
+    height: 10svh;
+    width: 80svw; 
+    border-top: solid 0.25svh var(--var_cor_vermelho);
+    border-left: solid 0.25svh var(--var_cor_vermelho);
+    border-right: solid 0.25svh var(--var_cor_vermelho);
+    border-radius: 5svh 5svh 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_painel_inferior_slide{
+    height: 5svh;
+    width: auto;
+}
+
+
+.main_painel_inferior_slide:hover{
+    transition: transform 0.25s;
+    transform: scale(1.5);
+}
+
+footer{
+    height: 5svh;
+    width: 100svw;
+    background-color: var(--var_cor_vermelho);
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 12.5svh;
+        width: 100svw;
+        padding-bottom: 7.5svh;
+    }
+
+    #header_cabecalho_icones{
+        height: 2svh;
+        width: 20svw;
+        padding-top: 2svh;
+        padding-right: 10svw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_cabecalho_icones{
+        height: 2svh;
+        width: 2svh;
+        padding-left: 1svw;
+
+    }
+
+    #header_painel_navegacao{
+        height: 5svh;
+        width: 100svw;
+        position: relative;
+    }
+
+    #header_painel_navegacao_fundo{
+        height: 5svh;
+        width: 100svw;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+
+    #header_painel_navegacao_fundo_esquerda{
+        height: 5svh;
+        width: 20svw;
+        background-color: var(--var_cor_vermelho);
+        border-top-right-radius: 5svh;
+        border-bottom-right-radius: 5svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header_painel_navegacao_fundo_esquerda_menu{
+        height: 3svh;
+        width: 5svw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        margin: none;
+        padding: none;
+        background-color: transparent;
+    }
+
+    .header_painel_navegacao_fundo_esquerda_menu{
+        height: 0.5svh;
+        width: 5svw;
+        background-color: var(--var_cor_branco);
+        border: none;
+        border-radius: 0.5svh;
+    }
+
+    #header_painel_navegacao_fundo_direita{
+        height: 5svh;
+        width: 20svw;
+        background-color: var(--var_cor_vermelho);
+        border-bottom-left-radius: 5svh;
+        border-top-left-radius: 5svh;
+    }
+
+    #header_painel_navegacao_fundo_logo{
+        height: 5svh;
+        width: auto;
+    }
+
+    #header_painel_navegacao_paginas{
+        display: none;
+    }
+
+    #header_painel_navegacao_paginas.aberto {
+        height: auto;
+        width: 85svw;
+        border: 0.25svh solid var(--var_cor_vermelho);
+        border-radius: 5svh;
+        background-color: var(--var_cor_branco);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 150%;
+        left: 7.5%;
+        box-shadow: 0 0 20svh 1svh var(--var-cor-preto);
+        box-sizing: border-box;
+    }
+
+    #header_painel_navegacao_paginas.aberto a {
+        font-family: 'Poppins';
+        color: var(--var_cor_vermelho);
+        padding: 2svh;
+    }
+
+    main{
+        height: auto;
+        min-height: 70svh;
+        width: 100svw;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+
+    }
+
+    #main_painel_superior{
+        height: 55svh;
+        width: 100svw;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 5svh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #main_painel_superior_slide{
+        height: 27svh;
+        width: 100svw;
+        border-top: solid 0.5svh var(--var_cor_vermelho);
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 0.5svh var(--var_cor_vermelho);
+        border-radius: 0;
+    }
+
+    .main_painel_superior_slide{
+        height: 25svh;
+        width: 100svw;
+        border-radius: 0;
+        object-fit: cover;
+    }
+
+    #main_painel_superior_cta{
+        height: 18svh;
+        width: 90svw;
+        border-radius: 4.5svh;
+        border: solid 0.25svw var(--var_cor_vermelho);
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #main_painel_superior_cta_texto{
+        color: var(--var_cor_vermelho);
+        text-decoration: none;
+        text-align: center;
+        padding-left: 15svw;
+        padding-right: 15svw;
+        padding-top: 2svh;
+    }
+
+    .main_painel_superior_cta_texto_regular{
+        font-size: 4svw;
+        font-family: 'Poppins';
+    }
+
+    .main_painel_superior_cta_texto_negrito{
+        font-size: 4svw;
+        font-family: 'Poppins-Bold';
+    }
+
+    #main_painel_superior_cta_botao{
+        height: 5svh;
+        width: 70svw;  
+        background-color: var(--var_cor_vermelho);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 5svh;
+        text-decoration: none;
+    }
+
+    #main_painel_superior_cta_botao p{
+        font-family: 'Poppins-Bold';
+        color: var(--var_cor_branco);
+    }
+
+    #main_painel_superior_cta_botao img{
+        height: 2svh;
+        width: auto; 
+    }
+
+    #main_painel_inferior{
+        height: 15svh;
+        width: 100svw; 
+        padding: 0;
+    }
+
+    #main_painel_inferior_navegacao{
+        width: 60svw; 
+        padding-top: 2svh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #main_painel_inferior_navegacao a{
+        font-size: 3svw;
+        font-family: 'Poppins';
+        color: var(--var_cor_vermelho);
+        text-decoration: none;
+    }
+
+    #main_painel_inferior_navegacao img{
+        height: 1svh;
+        width: auto;
+    }
+
+    #main_painel_inferior_slide{
+        height: 10svh;
+        width: 100svw; 
+        border-top: solid 0.25svh var(--var_cor_vermelho);
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;       /* não deixa quebrar linha */
+        overflow: hidden;        /* corta o que passar do container */
+    }
+
+    .main_painel_inferior_slide{
+        height: 5svh;
+        width: auto;
+        padding-left: 2.5svw;
+        padding-right: 2.5svw;
+    }
+
+
+    
+    footer{
+        height: 5svh;
+        width: 100svw;
+        background-color: var(--var_cor_vermelho);
+    }
+}
