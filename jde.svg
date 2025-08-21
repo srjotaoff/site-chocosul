@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape by Vulphere (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="894"
+   version="1.1"
+   viewBox="0 0 264.58333 236.5375"
+   id="svg2"
+   sodipodi:docname="jde.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.5"
+     inkscape:cx="247"
+     inkscape:cy="573"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="logo-mobile" />
+  <title
+     id="title1">JDE Peet's logo</title>
+  <desc
+     id="desc1">Dutch beverage corporation</desc>
+  <g
+     transform="translate(-70.76526,-33.96655)"
+     id="g2">
+    <g
+       id="logo-mobile"
+       transform="matrix(0.2645833,0,0,0.2645833,70.76526,33.96655)"
+       fill="#3f3a31">
+      <path
+         d="m 926.91629,711.10621 h -57.84957 c 2.68042,-23.41126 3.6983,-50.65654 3.6983,-85.36627 v -11.60385 h 28.39888 c 27.51671,0 50.65654,1.93398 73.11778,7.05731 v -72.03204 c -22.46124,5.08941 -45.60107,6.95552 -73.11778,6.95552 h -28.39888 v -91.64321 h 44.65105 c 27.55064,0 50.72439,2.57864 73.01599,7.76983 V 402.41687 H 778.00031 v 225.29097 c 0,67.18014 -4.13938,106.5382 -17.6772,145.2516 H 1000.0001 V 703.2346 c -22.39334,5.19119 -45.46531,7.87161 -73.04988,7.87161 z M 656.94034,580.61388 c 0,-76.68036 -41.93669,-116.14021 -87.23239,-116.14021 h -29.00961 v 139.9247 c 0,45.56713 -1.90004,78.17325 -7.36267,106.70784 h 30.63822 c 69.18197,0 92.96645,-64.83901 92.96645,-130.49233 z m 96.56297,0.84824 c 0,110.94902 -74.47495,191.49732 -189.86872,191.49732 H 418.89193 C 439.92814,725.49226 445.8997,684.87882 445.8997,604.29658 V 402.41687 h 119.09207 c 132.32452,0 188.51154,93.17003 188.51154,179.04525 z M 163.87883,472.2435 c 22.32553,-5.19119 45.53321,-7.80375 73.11778,-7.80375 h 78.37683 v 146.30341 c 0,163.87882 -65.82296,232.34828 -235.300126,232.34828 v 51.13155 c 230.312516,0 330.030906,-85.70557 330.030906,-261.86683 l 0.13572,-229.93929 H 163.87883 Z m -54.35484,12.18064 C 58.42638,475.90787 1.6338594e-5,433.83546 1.6338594e-5,351.7264 1.6338594e-5,247.22396 95.273668,161.51839 95.273668,75.778892 c 0,-35.693687 -22.088015,-64.669367 -40.850953,-76.001777 57.917415,10.82347 120.347445,63.617557 120.347445,133.342395 0,92.52537 -95.341504,183.32035 -95.341504,267.29553 0,40.37594 12.486005,70.91237 30.061414,83.97517 z"
+         id="path1"
+         sodipodi:nodetypes="ccscsccsccscccscccscsscscsssscscsscscscccccccsscsscc"
+         style="stroke-width:33.9294" />
+    </g>
+  </g>
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>JDE Peet's logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
