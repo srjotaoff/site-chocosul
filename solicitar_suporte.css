@@ -422,6 +422,7 @@ header{
     #header_painel_navegacao_fundo_logo{
         height: 5svh;
         width: auto;
+        max-width: 50svw;
     }
 
     #header_painel_navegacao_paginas{

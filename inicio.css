@@ -184,7 +184,7 @@ main{
     width: 20svw;  
     background-color: var(--var_cor_vermelho);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-top-left-radius: 5svh;
     border-bottom-left-radius: 5svh;
@@ -343,6 +343,7 @@ footer{
     #header_painel_navegacao_fundo_logo{
         height: 5svh;
         width: auto;
+        max-width: 50svw;
     }
 
     #header_painel_navegacao_paginas{
@@ -442,7 +443,7 @@ footer{
         width: 70svw;  
         background-color: var(--var_cor_vermelho);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         border-radius: 5svh;
         text-decoration: none;
