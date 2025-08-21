@@ -100,6 +100,7 @@ header{
 #header_painel_navegacao_fundo_logo{
     height: 5svh;
     width: auto;
+    max-width: 13svw;
 }
 
 #header_painel_navegacao_paginas{
@@ -342,7 +343,7 @@ footer{
 
 
 @media screen and (max-width: 768px) {
-    header{
+header{
         height: 12.5svh;
         width: 100svw;
         padding-bottom: 7.5svh;
@@ -507,6 +508,9 @@ footer{
         font-family: 'Poppins-Light';
         font-size: 3svw;
         background-color: var(--var_cor_vermelho);
+        display: flex;              /* ativa flexbox */
+        align-items: center;        /* centraliza verticalmente */
+        justify-content: center;    /* centraliza horizontalmente */
     }
 
     .main_painel_formulario_setor:hover{
@@ -627,11 +631,14 @@ footer{
         height: 5svh;
         width: 70svw;
         font-family: 'Poppins-Light';
-        font-size: 4svw;
+        font-size: 3svw;
         color: var(--var_cor_branco);
         background-color: var(--var_cor_vermelho);
         border-radius: 5svh;
         border: none;
+        display: flex;              /* ativa flexbox */
+        align-items: center;        /* centraliza verticalmente */
+        justify-content: center;    /* centraliza horizontalmente */
     }
 
     #main_painel_formulario_botoes_salvar:hover{
