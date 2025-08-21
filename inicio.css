@@ -381,12 +381,12 @@ footer{
     }
 
     #main_painel_superior{
-        height: 55svh;
+        height: 52.5svh;
         width: 100svw;
         display: flex;
         flex-direction: column;
         padding: 0;
-        padding-bottom: 5svh;
+        padding-bottom: 7.5svh;
         justify-content: space-between;
         align-items: center;
     }
