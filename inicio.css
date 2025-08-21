@@ -169,12 +169,12 @@ main{
 }
 
 .main_painel_superior_cta_texto_regular{
-    font-size: 4svh;
+    font-size: 3.5svh;
     font-family: 'Poppins';
 }
 
 .main_painel_superior_cta_texto_negrito{
-    font-size: 4svh;
+    font-size: 3.5svh;
     font-family: 'Poppins-Bold';
 }
 
@@ -193,6 +193,7 @@ main{
 #main_painel_superior_cta_botao p{
     font-family: 'Poppins-Bold';
     color: var(--var_cor_branco);
+    font-size: 1svw;
 }
 
 #main_painel_superior_cta_botao img{
@@ -215,10 +216,12 @@ main{
     padding-top: 2svh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #main_painel_inferior_navegacao a{
     font-family: 'Poppins';
+    font-size: 1svw;
     color: var(--var_cor_vermelho);
     text-decoration: none;
     align-items: center;
