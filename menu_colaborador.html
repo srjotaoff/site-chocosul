@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Chocosul Distribuidora</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="solicitar_suporte.css">
+    <link rel="stylesheet" type="text/css" href="menu_colaborador.css">
     <link rel="shortcut icon" href="icone_chocosul.svg">
-    <script src="solicitar_suporte.js" type="text/javascript"></script>
+    <script src="menu_colaborador.js" type="text/javascript"></script>
   </head>
   <body>
 
@@ -47,25 +47,11 @@
 
     <main class="main_index">
         <div id="main_painel">
-            <p id="main_painel_titulo">Solicitar Suporte</p>
-            <div id="main_painel_formulario">
-                <div id="main_painel_formulario_setor">
-                </div>
-                <div id="main_painel_formulario_opcoes">
-                    <div id="main_painel_formulario_opcoes_lista">
-                    </div>
-                    <textarea id="main_painel_formulario_opcoes_texto"></textarea>
-                </div>
-                <div id="main_painel_formulario_botoes">
-                    <div id="main_painel_formulario_botoes_anexo">
-                        <label id="main_painel_formulario_botoes_anexo_label" for="main_painel_formulario_botoes_anexo_input">Anexar arquivo</label>
-                        <input id="main_painel_formulario_botoes_anexo_input" type="file" accept="image/png, image/jpeg, image/jpg">
-                    </div>
-                    <button id="main_painel_formulario_botoes_salvar" onclick="salvar_solicitacao()">Salvar solicitação</button>
-                </div>
-                <div id="main_painel_formulario_alerta">
-                    <p></p>
-                </div>
+            <div id="main_painel_botoes">
+                <a class="main_painel_botoes">Resumo de Gestao</a>
+                <a class="main_painel_botoes">Materiais de apoio</a>
+                <a class="main_painel_botoes">Remuneracao</a>
+                <a href="solicitar_suporte.html" class="main_painel_botoes">Solicitar Suporte</a>
             </div>
         </div>
     </main>
