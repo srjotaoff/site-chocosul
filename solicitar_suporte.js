@@ -324,12 +324,6 @@ async function salvar_solicitacao() {
 Contato: ${contato_usuario}          https://wa.me/${contato_usuario}
 CPF: ${cpf_usuario}
 
-Setor: ${setor}
-Plataforma: ${plataforma}
-Tipo: ${tipo ?? '-'}
-Tempo previsto (h): ${tempoHoras}
-Instruções: ${instrucoes}
-
 Detalhes do solicitante:
 ${descricaoUsuario}
 
@@ -366,10 +360,7 @@ Tarefa aberta via atendimento ao colaborador -- site`;
       );
 
       // sucesso visual
-      alerta.style.display = 'flex';
-      alerta.style.backgroundColor = 'green';
-      alerta.style.color = 'var(--var_cor_branco)';
-      alerta.querySelector('p').textContent = 'Solicitação registrada. Logo alguém entrará em contato.';
+      window.location.href = 'solicitacao_sucesso.html'
     } else {
       alerta.style.display = 'flex';
       alerta.style.backgroundColor = 'red';

@@ -124,50 +124,43 @@ main{
     height: 75svh;
     width: 100svw;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-#main_painel{
-    height: 70svh;
-    width: 80svw;
-    border: none;
-    background-color: var(--var_cor_vermelho);
-    border-radius: 10svh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-#main_painel_botoes{
-    height: 30svh;
+#main_aviso{
+    height: 35svh;
     width: 40svw;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    padding-top: 20svh;
-    padding-bottom: 20svh;
-}
-
-.main_painel_botoes{
-    height: 5svh;
-    width: 20svw;
-    background-color: var(--var_cor_branco);
+    background-color: green;
     border-radius: 5svh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--var_cor_vermelho);
-    box-sizing: border-box;
 }
 
-.main_painel_botoes:hover{
-    background-color: var(--var_cor_vermelho);
-    border: solid 0.2svw var(--var_cor_branco);
+#main_aviso p{
+    height: auto;
+    width: 30svw;
+    font-family: 'Poppins-Light';
+    font-size: 4svh;
     color: var(--var_cor_branco);
-    box-sizing: border-box;
+    text-align: center;
+}
+
+#main_aviso a{
+    background-color: var(--var_cor_branco);
+    height: 5svh;
+    width: 30svw;
+    font-family: 'Poppins-Light';
+    font-size: 2svh;
+    color: green;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5svh;
 }
 
 footer{
@@ -285,51 +278,48 @@ header{
     }
     
     main{
-        height: auto;
-        min-height: 70svh;
+        height: 60svh;
         width: 100svw;
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
-
-    }
-
-    #main_painel{
-        height: 70svh;
-        width: 80svw;
-        border: none;
-        background-color: var(--var_cor_vermelho);
-        border-radius: 10svw;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+
     }
 
-    #main_painel_botoes{
+    #main_aviso{
         height: 30svh;
-        width: 60svw;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        align-items: center;
-        padding-top: 20svh;
-        padding-bottom: 20svh;
-    }
-
-    .main_painel_botoes{
-        height: 5svh;
-        width: 60svw;
-        background-color: var(--var_cor_branco);
+        width: 80svw;
+        background-color: green;
         border-radius: 5svh;
         display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: var(--var_cor_vermelho);
-        box-sizing: border-box;
     }
 
+    #main_aviso p{
+        height: auto;
+        width: 70svw;
+        font-family: 'Poppins-Light';
+        font-size: 5svw;
+        color: var(--var_cor_branco);
+        text-align: center;
+    }
 
+    #main_aviso a{
+        background-color: var(--var_cor_branco);
+        height: 5svh;
+        width: 60svw;
+        font-family: 'Poppins-Light';
+        font-size: 2svh;
+        color: green;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5svh;
+    }
 
     footer{
         height: 10svh;

@@ -452,7 +452,7 @@ header{
     
     main{
         height: auto;
-        min-height: 70svh;
+        min-height: 60svh;
         width: 100svw;
         display: flex;
         align-items: flex-end;
