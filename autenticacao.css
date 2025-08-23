@@ -139,34 +139,69 @@ main{
     align-items: center;
 }
 
-#main_painel_botoes{
-    height: 30svh;
-    width: 40svw;
+#main_painel_autenticacao{
+    height: 70svh;
+    width: 80svw;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    padding-top: 20svh;
-    padding-bottom: 20svh;
-}
-
-.main_painel_botoes{
-    height: 5svh;
-    width: 20svw;
-    background-color: var(--var_cor_branco);
-    border-radius: 5svh;
-    display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    color: var(--var_cor_vermelho);
-    box-sizing: border-box;
 }
 
-.main_painel_botoes:hover{
-    background-color: var(--var_cor_vermelho);
-    border: solid 0.2svw var(--var_cor_branco);
+#main_painel_autenticacao_texto{
+    height: 5svh;
+    width: 40svw;
     color: var(--var_cor_branco);
+    text-align: center;
+    padding-bottom: 2svh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#main_painel_autenticacao_cpf{
+    height: 5svh;
+    width: 25svw;
+    border: none;
+    border-radius: 5svh;
+    font-family: 'Poppins';
+    font-size: 2svh;
+    color: var(--var_cor_vermelho);
+    outline: none;
+    text-align: center;
+}
+
+#main_painel_autenticacao_botao{
+    height: 5svh;
+    width: 25svw;
+    font-family: 'Poppins';
+    color: var(--var_cor_branco);
+    background-color: var(--var_cor_vermelho);
+    border: solid 0.25svh var(--var_cor_branco);
+    border-radius: 5svh;
+    margin-top: 2.5svh;
+    margin-bottom: 2.5svh;
+}
+
+#main_painel_autenticacao_botao:hover{
+    color: var(--var_cor_vermelho);
+    background-color: var(--var_cor_branco);
+    border: solid 0.25svh var(--var_cor_vermelho);
+}
+
+#main_painel_autenticacao_alerta{
+    display: none;
+    flex-direction: column;
+    height: 5svh;
+    width: 20svw;
+    border-radius: 5svh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: auto;
+    color: var(--var_cor_branco);
+    border: solid 0.25svh var(--var_cor_branco);
     box-sizing: border-box;
 }
 
@@ -305,30 +340,76 @@ header{
         align-items: center;
     }
 
-    #main_painel_botoes{
-        height: 30svh;
+
+    #main_painel_autenticacao{
+        height: 70svh;
         width: 60svw;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
-        align-items: center;
-        padding-top: 20svh;
-        padding-bottom: 20svh;
-    }
-
-    .main_painel_botoes{
-        height: 5svh;
-        width: 70svw;
-        background-color: var(--var_cor_branco);
-        border-radius: 5svh;
-        display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
-        color: var(--var_cor_vermelho);
-        box-sizing: border-box;
-        font-size: 2svh;
     }
+
+    #main_painel_autenticacao_texto{
+        height: 5svh;
+        width: 60svw;
+        font-size: 2svh;
+        color: var(--var_cor_branco);
+        text-align: center;
+        padding-bottom: 2svh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #main_painel_autenticacao_cpf{
+        height: 5svh;
+        width: 60svw;
+        border: none;
+        border-radius: 5svh;
+        font-family: 'Poppins';
+        font-size: 2svh;
+        color: var(--var_cor_vermelho);
+        outline: none;
+        text-align: center;
+    }
+
+    #main_painel_autenticacao_botao{
+        height: 5svh;
+        width: 60svw;
+        font-family: 'Poppins';
+        color: var(--var_cor_branco);
+        background-color: var(--var_cor_vermelho);
+        border: solid 0.25svh var(--var_cor_branco);
+        border-radius: 5svh;
+        margin-top: 2.5svh;
+        margin-bottom: 2.5svh;
+    }
+
+    #main_painel_autenticacao_botao:hover{
+        color: var(--var_cor_vermelho);
+        background-color: var(--var_cor_branco);
+        border: solid 0.25svh var(--var_cor_vermelho);
+    }
+
+    #main_painel_autenticacao_alerta{
+        display: none;
+        flex-direction: column;
+        height: 5svh;
+        width: 60svw;
+        border-radius: 5svh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Poppins';
+        font-size: auto;
+        color: var(--var_cor_branco);
+        border: solid 0.25svh var(--var_cor_branco);
+        box-sizing: border-box;
+    }
+
+
+
 
 
 

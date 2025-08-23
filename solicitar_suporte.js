@@ -1,7 +1,36 @@
-// ================== DADOS DO USUÁRIO ==================
-const cpf_usuario = '00000000000';
-const nome_usuario = 'JOAO SILVA SOUZA JUNIOR';
-const contato_usuario = '73999982509';
+const colaboradorStr = localStorage.getItem('colaborador');
+
+// ================== DADOS DO COLABORADOR (global) ==================
+let COLABORADOR = null;
+let nome_usuario   = '';
+let tipoCargo      = '';
+let cpf_usuario    = '';
+let contato_usuario = '';
+
+(function carregarColaborador() {
+  const colaboradorStr = localStorage.getItem('colaborador');
+
+  if (colaboradorStr) {
+    try {
+      const colaborador = JSON.parse(colaboradorStr) || {};
+      COLABORADOR   = colaborador;
+
+      nome_usuario    = colaborador.nome || '';
+      tipoCargo       = colaborador.tipo_cargo || '';
+      cpf_usuario     = colaborador.cpf || '';
+      contato_usuario = colaborador.telefone || '';
+
+      console.log('Nome:', nome_usuario);
+      console.log('Cargo:', tipoCargo);
+      console.log('CPF:', cpf_usuario);
+      console.log('Telefone:', contato_usuario);
+    } catch (e) {
+      console.warn('Falha ao ler colaborador do localStorage:', e);
+    }
+  } else {
+    console.warn('Nenhum colaborador autenticado');
+  }
+})();
 
 // ================== CONFIG BITRIX ==================
 const WEBHOOK_BASE = 'https://chocosul.bitrix24.com.br/rest/270/mwze5xa0wbsh91l1/';
