@@ -116,7 +116,7 @@ header{
 #header_painel_navegacao_paginas a{
     text-align: center;
     text-decoration: none;
-    font-size: 1.75svh;
+    font-size: 1svw;
     color: var(--var_cor_branco);
 }
 
@@ -451,6 +451,7 @@ header{
         font-family: 'Poppins';
         color: var(--var_cor_vermelho);
         padding: 2svh;
+        font-size: 1.5svh;
     }
     
     main{

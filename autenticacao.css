@@ -116,7 +116,7 @@ header{
 #header_painel_navegacao_paginas a{
     text-align: center;
     text-decoration: none;
-    font-size: 1.75svh;
+    font-size: 1svw;
     color: var(--var_cor_branco);
 }
 
@@ -317,6 +317,7 @@ header{
         font-family: 'Poppins';
         color: var(--var_cor_vermelho);
         padding: 2svh;
+        font-size: 1.5svh;
     }
     
     main{
@@ -353,7 +354,7 @@ header{
     #main_painel_autenticacao_texto{
         height: 5svh;
         width: 60svw;
-        font-size: 2svh;
+        font-size: 1.5svh;
         color: var(--var_cor_branco);
         text-align: center;
         padding-bottom: 2svh;
@@ -368,7 +369,7 @@ header{
         border: none;
         border-radius: 5svh;
         font-family: 'Poppins';
-        font-size: 2svh;
+        font-size: 1.5svh;
         color: var(--var_cor_vermelho);
         outline: none;
         text-align: center;
