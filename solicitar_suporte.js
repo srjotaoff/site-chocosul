@@ -2,9 +2,9 @@ const colaboradorStr = localStorage.getItem('colaborador');
 
 // ================== DADOS DO COLABORADOR (global) ==================
 let COLABORADOR = null;
-let nome_usuario   = '';
-let tipoCargo      = '';
-let cpf_usuario    = '';
+let nome_usuario = '';
+let tipoCargo = '';
+let cpf_usuario = '';
 let contato_usuario = '';
 
 (function carregarColaborador() {
@@ -13,17 +13,13 @@ let contato_usuario = '';
   if (colaboradorStr) {
     try {
       const colaborador = JSON.parse(colaboradorStr) || {};
-      COLABORADOR   = colaborador;
+      COLABORADOR = colaborador;
 
-      nome_usuario    = colaborador.nome || '';
-      tipoCargo       = colaborador.tipo_cargo || '';
-      cpf_usuario     = colaborador.cpf || '';
+      nome_usuario = colaborador.nome || '';
+      tipoCargo = colaborador.tipo_cargo || '';
+      cpf_usuario = colaborador.cpf || '';
       contato_usuario = colaborador.telefone || '';
 
-      console.log('Nome:', nome_usuario);
-      console.log('Cargo:', tipoCargo);
-      console.log('CPF:', cpf_usuario);
-      console.log('Telefone:', contato_usuario);
     } catch (e) {
       console.warn('Falha ao ler colaborador do localStorage:', e);
     }
@@ -35,6 +31,8 @@ let contato_usuario = '';
 // ================== CONFIG BITRIX ==================
 const WEBHOOK_BASE = 'https://chocosul.bitrix24.com.br/rest/270/mwze5xa0wbsh91l1/';
 
+// ================== NOVO: VARIÁVEL GLOBAL PARA ARMAZENAR DADOS DA PLANILHA ==================
+let registrosCarregados = [];
 
 // ================== FILE INPUT (mostra nome do anexo) ==================
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (this.files && this.files.length > 0) {
         labelFile.textContent = this.files[0].name; // mostra o nome do arquivo
       } else {
-        labelFile.textContent = "Anexar arquivo";   // volta ao texto padrão
+        labelFile.textContent = "Anexar arquivo"; // volta ao texto padrão
       }
     });
   }
@@ -113,9 +111,9 @@ function slugify(str) {
   return String(str || '')
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove acentos
     .toLowerCase()
-    .replace(/\s+/g, '_')          // espaços -> _
-    .replace(/[^a-z0-9_]/g, '')    // remove símbolos
-    .replace(/_+/g, '_')           // colapsa _
+    .replace(/\s+/g, '_') // espaços -> _
+    .replace(/[^a-z0-9_]/g, '') // remove símbolos
+    .replace(/_+/g, '_') // colapsa _
     .replace(/^_+|_+$/g, '');
 }
 
@@ -144,8 +142,9 @@ function criarBotoesSetor(registros) {
     btn.id = `main_painel_formulario_setor_${slug}`;
     btn.textContent = setor;
     btn.onclick = () => {
-      desmarcarTodasOpcoes();     // ao trocar de setor, nada fica marcado
+      desmarcarTodasOpcoes(); // ao trocar de setor, nada fica marcado
       mostrar_opcoes_lista(slug); // usa função já existente
+      document.getElementById('main_painel_formulario_opcoes_texto').placeholder = ''; // LIMPA O PLACEHOLDER
     };
     container.appendChild(btn);
   });
@@ -181,6 +180,18 @@ function criarListasOpcoesPorSetor(registros) {
       input.checked = false;
       input.defaultChecked = false;
 
+      // ================== NOVO: OURO DO CÓDIGO AQUI ==================
+      input.addEventListener('change', () => {
+        const textarea = document.getElementById('main_painel_formulario_opcoes_texto');
+        const registroEncontrado = registrosCarregados.find(r => r['DESCRIÇÃO'] === input.value);
+        if (registroEncontrado && registroEncontrado['INSTRUÇÕES']) {
+          textarea.placeholder = registroEncontrado['INSTRUÇÕES'];
+        } else {
+          textarea.placeholder = '';
+        }
+      });
+      // =============================================================
+
       label.appendChild(input);
       label.appendChild(document.createTextNode(' ' + item['DESCRIÇÃO']));
 
@@ -200,10 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
   gvizJSONP({
     sheetId, gid, tq,
     onData: (data) => {
-      const registros = parseTableToObjects(data.table);
+      // NOVO: Armazenamos os dados globalmente
+      registrosCarregados = parseTableToObjects(data.table);
 
-      criarBotoesSetor(registros);
-      criarListasOpcoesPorSetor(registros);
+      criarBotoesSetor(registrosCarregados);
+      criarListasOpcoesPorSetor(registrosCarregados);
 
       // Garante que nada está visível ou marcado ao abrir:
       desmarcarTodasOpcoes();
@@ -313,11 +325,11 @@ async function salvar_solicitacao() {
     }
 
     // ===== transforma a linha em variáveis =====
-    const setor       = registro['SETOR'] ?? '';
-    const plataforma  = registro['PLATAFORMA'] ?? '';
-    const instrucoes  = registro['INSTRUÇÕES'] ?? '';
-    const tipoVal     = registro['TIPO'];
-    const tipo        = Number.isFinite(tipoVal) ? Number(tipoVal) : (Number(tipoVal) || null);
+    const setor = registro['SETOR'] ?? '';
+    const plataforma = registro['PLATAFORMA'] ?? '';
+    const instrucoes = registro['INSTRUÇÕES'] ?? '';
+    const tipoVal = registro['TIPO'];
+    const tipo = Number.isFinite(tipoVal) ? Number(tipoVal) : (Number(tipoVal) || null);
 
     // tempoHoras (em horas; aceita fracionado)
     {
@@ -334,23 +346,34 @@ async function salvar_solicitacao() {
 
     // observadores (IDs inteiros > 0)
     function parseObservadores(v) {
-      if (v == null) return [];
-      if (Array.isArray(v)) return v.map(Number).filter(n => Number.isInteger(n) && n > 0);
-      if (typeof v === 'number') return (Number.isInteger(v) && v > 0) ? [v] : [];
-      return String(v)
-        .split(/[,\s;]+/)
-        .map(s => Number(s))
+      if (v == null) {
+        return [];
+      }
+
+      if (Array.isArray(v)) {
+        return v.map(Number).filter(n => Number.isInteger(n) && n > 0);
+      }
+
+      const stringValue = String(v);
+
+      return stringValue
+        .split(/[,\s;.]+/)
+        .map(s => parseInt(s, 10))
         .filter(n => Number.isInteger(n) && n > 0);
     }
+
+    // Seu código principal
     let observadores = parseObservadores(registro['OBSERVADORES']);
     observadores = observadores.length ? Array.from(new Set([...observadores, id_responsavel])) : [id_responsavel];
+
+    console.log(observadores);
 
     // prazo: agora + tempoHoras (em horas) -> ISO
     const prazo_tarefa = new Date(Date.now() + tempoHoras * 60 * 60 * 1000).toISOString();
 
     const descricaoBitrix =
-`Nome do solicitante: ${nome_usuario}
-Contato: ${contato_usuario}          https://wa.me/${contato_usuario}
+      `Nome do solicitante: ${nome_usuario}
+Contato: ${contato_usuario}       https://wa.me/${contato_usuario}
 CPF: ${cpf_usuario}
 
 Detalhes do solicitante:
@@ -360,11 +383,11 @@ Tarefa aberta via atendimento ao colaborador -- site`;
 
     const parametros_api = {
       fields: {
-        TITLE: nome_tarefa,              // Título da tarefa (DESCRIÇÃO)
-        DESCRIPTION: descricaoBitrix,    // Texto enviado ao Bitrix
-        RESPONSIBLE_ID: id_responsavel,  // Responsável da planilha
-        DEADLINE: prazo_tarefa,          // Prazo: agora + TEMPO PARA RESOLUÇÃO (h)
-        AUDITORS: observadores           // Observadores da planilha
+        TITLE: nome_tarefa, // Título da tarefa (DESCRIÇÃO)
+        DESCRIPTION: descricaoBitrix, // Texto enviado ao Bitrix
+        RESPONSIBLE_ID: id_responsavel, // Responsável da planilha
+        DEADLINE: prazo_tarefa, // Prazo: agora + TEMPO PARA RESOLUÇÃO (h)
+        AUDITORS: observadores // Observadores da planilha
       }
     };
 

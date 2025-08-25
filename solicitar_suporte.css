@@ -156,14 +156,17 @@ main{
 
 #main_painel_formulario_setor{
     display: flex;
+    gap: 1svw;
     width: 60svw;
     height: 5svh;
     justify-content: space-between;
+    align-items: center; 
 }
 
 .main_painel_formulario_setor{
     height: 5svh;
-    width: 14svw;
+    width: auto;
+    flex-grow: 1;
     color: var(--var_cor_branco);
     border-radius: 5svh;
     border: none;
@@ -497,7 +500,8 @@ header{
         grid-template-rows: repeat(2, 4svh); /* Cria 3 colunas de tamanho igual */
         gap: 1svh;
         width: 70svw;
-        height: 9svh;
+        height: auto;
+        min-height: 9svh;
     }
 
     .main_painel_formulario_setor{
@@ -539,7 +543,6 @@ header{
         display: flex;
         flex-direction: column;
         padding-bottom: 3svh;
-
         min-height: unset;  /* remove limite */
         max-height: unset;  /* remove limite */
         overflow: visible;  /* desativa rolagem */
