@@ -344,7 +344,6 @@ async function salvar_solicitacao() {
       var id_responsavel = (Number.isInteger(n) && n > 0) ? n : 270;
     }
 
-    // observadores (IDs inteiros > 0)
     function parseObservadores(v) {
       if (v == null) {
         return [];
@@ -362,13 +361,10 @@ async function salvar_solicitacao() {
         .filter(n => Number.isInteger(n) && n > 0);
     }
 
-    // Seu código principal
     let observadores = parseObservadores(registro['OBSERVADORES']);
-    observadores = observadores.length ? Array.from(new Set([...observadores, id_responsavel])) : [id_responsavel];
 
-    console.log(observadores);
+    observadores = Array.from(new Set(observadores));
 
-    // prazo: agora + tempoHoras (em horas) -> ISO
     const prazo_tarefa = new Date(Date.now() + tempoHoras * 60 * 60 * 1000).toISOString();
 
     const descricaoBitrix =
@@ -376,10 +372,9 @@ async function salvar_solicitacao() {
 Contato: ${contato_usuario}       https://wa.me/${contato_usuario}
 CPF: ${cpf_usuario}
 
-Detalhes do solicitante:
-${descricaoUsuario}
 
-Tarefa aberta via atendimento ao colaborador -- site`;
+Detalhes do solicitante:
+${descricaoUsuario}`;
 
     const parametros_api = {
       fields: {
