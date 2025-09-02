@@ -434,29 +434,30 @@ header{
 
     #header_painel_navegacao_paginas.aberto {
         height: auto;
-        width: 85svw;
-        border: 0.25svh solid var(--var_cor_vermelho);
-        border-radius: 5svh;
+        width: 95svw;
+        border-radius: 5svh 5svh 0 0;
         background-color: var(--var_cor_branco);
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 150%;
-        left: 7.5%;
-        box-shadow: 0 0 20svh 1svh var(--var-cor-preto);
+        position: fixed;
+        bottom: 0;
+        left: 2.5svw;
+        right: 2.5svw;
+        box-shadow: 0 0 0 100svh rgba(0, 0, 0, 0.75);
         box-sizing: border-box;
+        padding-bottom: 5svh;
     }
 
     #header_painel_navegacao_paginas.aberto a {
         font-family: 'Poppins';
         color: var(--var_cor_vermelho);
         padding: 2svh;
-        font-size: 1.5svh;
+        font-size: 1.75svh;
     }
     
     main{
         height: auto;
-        min-height: 60svh;
+        min-height: 65svh;
         width: 100svw;
         display: flex;
         align-items: flex-end;
@@ -467,7 +468,7 @@ header{
     #main_painel{
         height: auto;
         width: 80svw;
-        min-height: 70svh;
+        min-height: 65svh;
         border: 0.5svw solid var(--var_cor_vermelho);
         background-color: var(--var_cor_branco);
         border-radius: 10svw;
@@ -487,8 +488,7 @@ header{
     #main_painel_formulario{
         height: auto;
         width: 70svw;
-
-        min-height: 57svh;
+        min-height: 50svh;
         padding-top: 3svh;
         padding-bottom: 5svh;
         display: flex;
