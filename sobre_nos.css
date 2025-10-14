@@ -25,6 +25,14 @@
   --var-cor-preto: #1a1a1aff;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 200svh;
+    width: 100svw;
+    overflow-x: hidden; 
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -123,7 +131,7 @@ header{
 #header_painel_navegacao_paginas a{
     text-align: center;
     text-decoration: none;
-    font-size: 1svw;
+    font-size: 0.8svw;
     color: var(--var_cor_branco);
 }
 
@@ -255,6 +263,15 @@ header{
 
 
 @media screen and (max-width: 768px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 230svh;
+        width: 100svw;
+        overflow-x: hidden; 
+    }
+    
     header{
         height: 12.5svh;
         width: 100svw;
@@ -264,7 +281,7 @@ header{
     #header_cabecalho_icones{
         height: 2svh;
         width: 20svw;
-        padding-top: 2svh;
+        padding-top: 1svh;
         padding-right: 10svw;
         display: flex;
         justify-content: space-between;
@@ -273,22 +290,20 @@ header{
     .header_cabecalho_icones{
         height: 2svh;
         width: 2svh;
-        padding-left: 1svw;
-
+        margin-left: 1vh;
     }
 
     #header_painel_navegacao{
         height: 5svh;
         width: 100svw;
-        position: relative;
+
     }
 
     #header_painel_navegacao_fundo{
         height: 5svh;
         width: 100svw;
         display: flex;
-        justify-content: space-between;
-        position: absolute;
+
     }
 
     #header_painel_navegacao_fundo_esquerda{
@@ -325,6 +340,7 @@ header{
 
     #header_painel_navegacao_fundo_direita{
         height: 5svh;
+        margin-left: auto;
         width: 20svw;
         background-color: var(--var_cor_vermelho);
         border-bottom-left-radius: 5svh;
@@ -334,7 +350,8 @@ header{
     #header_painel_navegacao_fundo_logo{
         height: 5svh;
         width: auto;
-        max-width: 50svw;
+        max-width: 52svw;
+        margin: auto;
     }
 
     #header_painel_navegacao_paginas{
@@ -364,6 +381,140 @@ header{
         font-size: 1.75svh;
     }
 
-    
+
+    .main_index_primeira {
+        display: flex;
+        flex-direction: column;
+        width: 100svw;
+        height: 109.5svh;
+    }
+
+    .main_index_primeira_esquerda {
+        margin-left: 10vw;
+        margin-top: 10vh;
+        width: 37.5vw;
+    }
+
+    .main_index_primeira_esquerda_text {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        width: 57vw;
+        height: 25vh;
+    }
+
+    .img_main_index_primeira_esquerda_text2 {
+        white-space: nowrap;
+        width: 57vw;
+        color: var(--var_cor_vermelho);
+        font-family: 'Poppins-Bold';
+        font-size: 4vh;
+    }
+
+    .main_index_primeira_esquerda_box_text1 {
+        font-family: 'Poppins-Light';
+        font-size: 1.9vh;
+        text-align: center;
+        width: 83vw;
+        color: var(--var_cor_branco);
+    }
+
+    .main_index_primeira_esquerda_box_text1 > p  {
+        margin-top: -50vh;
+        
+    }
+
+    #main_index_primeira_esquerda_box_text1_1 {
+        max-width: 90vw;
+    }
+
+    #main_index_primeira_esquerda_box_text1_2 {
+        max-width: 90vw;
+        margin-top: -1vh;
+    }
+
+    #main_index_primeira_esquerda_box_text1_3 {
+        max-width: 90vw;
+    }
+
+    .img_main_index_primeira_esquerda_text {
+        width: 60vw;
+        color: var(--var_cor_vermelho);
+    }
+
+    .main_index_primeira_esquerda_box {
+        margin-top: -1vh;
+        width: 90svw;
+        margin-left: -5vw;
+        height: 30vh;
+        background-color: var(--var_cor_vermelho);
+        border-radius: 4vh 4vh 0 0;
+    }
+
+    .main_index_primeira_direita{
+        height: 80.3svh;
+    }
+
+    .main_index_primeira_direita_box_superior {
+        width: 90svw;
+        margin-top: 4.9vh;
+        margin-left: 2.5vw;
+        height: 80vh;
+        background-color: var(--var_cor_vermelho);
+        border-radius: 0;
+    }
+
+    .main_index_primeira_direita_box_inferior {
+        margin-top: -54vh;
+        margin-left: 1.5vw;
+        width: 85vw;
+        height: 20vh;
+        border: none;
+        background-color: var(--var_cor_branco);
+        border-radius: 0 4vh 4vh 0;
+    }
+
+    .main_index_segunda {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        height: 100vh;
+        margin-top: 0vh;
+    }
+
+    .main_index_segunda_esquerda {
+        width: 85vw;
+        margin-left: 10.2vw;
+        height: 30vh;
+        border: none;
+        background-color: var(--var_cor_branco);
+        border-radius: 4vh 0 0 4vh;
+    }
+
+    .main_index_segunda_direita_superior {
+        margin-left: 5vw;
+        margin-top: -1.5vh;
+        width: 90vw;
+        height: 25vh;
+        background-color: var(--var_cor_vermelho);
+        border-radius: 0;
+    }
+
+    .main_index_segunda_direita_meio {
+        margin-left: 5vw;
+        margin-top: -2vh;
+        width: 90vw;
+        height: 22vh;
+        background-color: var(--var_cor_vermelho);
+        border-radius: 0 0 4vh 4vh;
+    }
+
+    .main_index_segunda_direita_inferior {
+        margin-top: 6vh;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
 
 }

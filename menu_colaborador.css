@@ -116,7 +116,7 @@ header{
 #header_painel_navegacao_paginas a{
     text-align: center;
     text-decoration: none;
-    font-size: 1svw;
+    font-size: 0.8svw;
     color: var(--var_cor_branco);
 }
 

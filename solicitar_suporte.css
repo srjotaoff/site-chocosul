@@ -451,7 +451,7 @@ header{
     #header_painel_navegacao_paginas.aberto a {
         font-family: 'Poppins';
         color: var(--var_cor_vermelho);
-        padding: 2svh;
+        padding: 0.8svw;
         font-size: 1.75svh;
     }
     
