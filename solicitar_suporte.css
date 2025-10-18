@@ -281,7 +281,7 @@ main{
     color: var(--var_cor_branco);
     background-color: var(--var_cor_vermelho);
     border-radius: 5svh;
-    display: flex;
+    display: none;                  /*flex;*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -289,7 +289,7 @@ main{
 
 #main_painel_formulario_botoes_anexo_label{
     font-size: 1.5svh;
-    display: block;          /* garante que funcione */
+    display: none;/*block;         garante que funcione */
     max-width: 100%;         /* limite dentro do container */
     white-space: nowrap;     /* impede quebrar linha */
     overflow: hidden;        /* esconde o que passar */
@@ -346,7 +346,7 @@ footer{
 
 
 @media screen and (max-width: 768px) {
-header{
+    header{
         height: 12.5svh;
         width: 100svw;
         padding-bottom: 7.5svh;
@@ -451,7 +451,7 @@ header{
     #header_painel_navegacao_paginas.aberto a {
         font-family: 'Poppins';
         color: var(--var_cor_vermelho);
-        padding: 0.8svw;
+        padding: 2svh;
         font-size: 1.75svh;
     }
     

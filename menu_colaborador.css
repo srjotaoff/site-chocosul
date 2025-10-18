@@ -154,13 +154,14 @@ main{
     height: 5svh;
     width: 20svw;
     background-color: var(--var_cor_branco);
-    border-radius: 5svh;
+    border-radius: 2svh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: var(--var_cor_vermelho);
     box-sizing: border-box;
+    font-size: 2svh;
 }
 
 .main_painel_botoes:hover{
@@ -322,14 +323,14 @@ header{
         height: 5svh;
         width: 70svw;
         background-color: var(--var_cor_branco);
-        border-radius: 5svh;
+        border-radius: 2svh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: var(--var_cor_vermelho);
         box-sizing: border-box;
-        font-size: 1.5svh;
+        font-size: 1.75svh;
     }
 
 

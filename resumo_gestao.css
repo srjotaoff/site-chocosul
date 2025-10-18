@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+body,
+main{
+    min-height: 100svh !important;
+    min-width: 100svw !important;
+    max-height: 100svh !important;
+    max-width: 100svw !important;
+}
+
+iframe{
+    min-height: 99svh  !important;
+    min-width: 99svw !important;
+    max-height: 99svh !important;
+    max-width: 99svw !important;
+}

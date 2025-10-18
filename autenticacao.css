@@ -199,7 +199,7 @@ main{
     align-items: center;
     text-align: center;
     font-family: 'Poppins';
-    font-size: auto;
+    font-size: 2svh;
     color: var(--var_cor_branco);
     border: solid 0.25svh var(--var_cor_branco);
     box-sizing: border-box;
@@ -404,7 +404,7 @@ header{
         align-items: center;
         text-align: center;
         font-family: 'Poppins';
-        font-size: auto;
+        font-size: 2svh;
         color: var(--var_cor_branco);
         border: solid 0.25svh var(--var_cor_branco);
         box-sizing: border-box;
